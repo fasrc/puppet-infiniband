@@ -36,7 +36,6 @@ define infiniband::interface (
   Optional[Stdlib::IP::Address] $ipaddr                       = undef,
   Optional[Stdlib::IP::Address] $netmask                      = undef ,
   Optional[Stdlib::IP::Address] $gateway                      = undef,
-  Optional[Stdlib::Compat::Ip_address] $gateway               = undef,
   Enum['present', 'absent'] $ensure                           = 'present',
   Boolean $enable                                             = true,
   Enum['yes', 'no'] $connected_mode                           = 'yes',
