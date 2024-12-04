@@ -33,8 +33,9 @@
 #   The bonding options to use for this bonding interface
 #
 define infiniband::interface (
-  Stdlib::Compat::Ip_address $ipaddr,
-  Stdlib::Compat::Ip_address $netmask,
+  Optional[Stdlib::IP::Address] $ipaddr                       = undef,
+  Optional[Stdlib::IP::Address] $netmask                      = undef ,
+  Optional[Stdlib::IP::Address] $gateway                      = undef,
   Optional[Stdlib::Compat::Ip_address] $gateway               = undef,
   Enum['present', 'absent'] $ensure                           = 'present',
   Boolean $enable                                             = true,
